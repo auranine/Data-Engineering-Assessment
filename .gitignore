@@ -1,0 +1,7 @@
+.idea
+*.iml
+.terraform
+**/__pycache__/
+.venv
+__pycache__/
+*.pyc

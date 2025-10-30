@@ -15,9 +15,9 @@ module "lambda_repo" {
 }
 ```
 
-Inputs
+### Inputs:
 
-| Name | Description| Required|
-|--|--|--|
-repo_name|	Name of the ECR repository.	|Yes
-default_tags|Tags for the repository (optional).|No
+| Name         | Description                         | Required |
+|--------------|-------------------------------------|----------|
+ repo_name    | 	Name of the ECR repository.	       | Yes      
+ default_tags | Tags for the repository (optional). | No       

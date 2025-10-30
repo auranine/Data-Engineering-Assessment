@@ -1,0 +1,38 @@
+[project]
+name = "app_analytics"
+version = "1.0.0"
+description = "Analytics"
+readme = "Readme.md"
+requires-python = "==3.12.6" # Locking in python version for repeatability
+
+## DEPS ############################
+dependencies = [
+    "pandas"
+]
+
+## DEV DEPS ########################
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+    "mypy",
+    "pandas-stubs"
+]
+
+## TOOL CONFIG #####################
+[tool.uv]
+
+[tool.ruff]
+extend = "ruff.toml"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.mypy]
+mypy_path = ["src"]
+files = ["src"]
+python_version = "3.12"
+disallow_untyped_defs = true
+strict = true
+

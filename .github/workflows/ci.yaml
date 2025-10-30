@@ -1,0 +1,21 @@
+# This can be extracted to a common file for use in other modules if this were a mono-repo of functions
+name: Build, Test, Deploy to QA
+on: [push, pull_request]
+jobs:
+  # This could be duplicated per module for a monorepo (ie. app/module1, app/module2, etc)
+  app:
+    # Using 'latest' for simplicity...
+    # I would normally set this to a hard version to ensure the
+    # build is always using the same underlying libraries, OS, etc
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3 # install uv
+      - run: uv python install # installs version based on .python-version
+      - run: uv sync --all-extras --dev
+
+
+

@@ -5,7 +5,7 @@ resource "aws_s3_bucket" "input_s3" {
   bucket = "${local.app_name}-input-bucket"
   tags = merge({
         Name        = "${local.app_name}-input-bucket"
-        Environment = "${var.env}"
+        Environment = var.env
     }, local.default_tags
   )
   force_destroy = true

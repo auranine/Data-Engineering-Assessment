@@ -1,5 +1,5 @@
 import pandas as pd
-"Complete thes functions or write your own to perform the following tasks"
+"Complete these functions or write your own to perform the following tasks"
 
 def calculate_profit_by_order(orders_df):
     "Calculate profit for each order in the DataFrame"

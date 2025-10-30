@@ -25,9 +25,10 @@ module "lambda_deployment" {
 }
 ```
 
-Inputs:
+### Inputs:
+
 Name| Description| Type| Required
-|--|--|--|--|
+|---|------------|-----|----------|
 role_name| Name of the IAM Role for the Lambda function.| string| Yes
 lambda_name| Name of the Lambda function.| string| Yes
 image_uri| URI of the container image for the Lambda function.| string| Yes
